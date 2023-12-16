@@ -132,6 +132,20 @@
           </td>
           <td> {{ fecha | date:'MMMM - dd':'':idioma }} </td>
         </tr>
+        <tr>
+          <td> {{ nombre2 }} </td>
+          <td> capitalizado </td>
+          <td> {{ nombre2 | capitalizado:true }} </td>
+        </tr>
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> 
+            contrasena:activar
+            <br>
+            <button (click)="activar = !activar" class="btn btn-outline-primary"> {{ activar ? 'Mostrar' : 'Ocultar' }}</button>
+          </td>
+          <td> {{ nombre | contrasena:activar }} </td>
+        </tr>
       </tbody>
     </table>
 
@@ -148,5 +162,19 @@
         <pre> {{ heroe | json }} </pre>
       </div>
     </div>
+  </div>
+</div>
+
+<hr>
+<h4>Domseguro</h4>
+<div class="row">
+  <div class="col">
+    <iframe width="560" 
+            height="315" 
+            [src]="videoUrl | domseguro"
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
   </div>
 </div>

@@ -30,4 +30,9 @@ export class AppComponent {
 
   fecha: Date = new Date();
   idioma: string = 'es';
+  videoUrl: string = 'https://www.youtube.com/embed/g7U96o3f9FI?si=y0NGRpUxsFlFLoXD';
+
+  /* PIPE PERSONALIZADO */
+  nombre2: string = 'SaLmA cRuZ sÁnChEz';
+  activar: boolean = true;
 }
